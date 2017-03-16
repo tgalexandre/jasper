@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Author
-cover: 'assets/images/cover4.jpg'
+cover: 'assets/images/the6ix.jpg'
 class: 'author-template'
 navigation: True
 label: Author
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/logo.png'
 current: author
 ---
 <!-- < default}} -->
@@ -35,18 +35,16 @@ current: author
             <h2 class="author-bio">{{ site.bio }}</h2>
         {% endif %}
         <div class="author-meta">
-            {% if site.location %}<span class="author-location icon-location">{{ site.location }}</span>{% endif %}
-            {% if site.url %}<span class="author-link icon-link"><a href="{{ site.url }}">{{ site.short_url }}</a></span>{% endif %}
-            <!-- <span class="author-stats"><i class="icon-stats"></i> [[plural ../pagination.total empty='No posts' singular='% post' plural='% posts']]</span> -->
-            <span class="author-stats"><i class="icon-stats"></i>{% if paginator.total_posts == 0 %}No posts{% elsif paginator.total_posts == 1 %}1 post{% else %}{{ paginator.total_posts }} posts{% endif %}</span>
+            {% if site.linkedin %}<span class="author-link icon-link"><a href="{{ site.linkedin }}">{{ site.short_linkedin }}</a></span>{% endif %}
+            <!-- <span class="author-stats"><i class="icon-stats"></i> [[plural ../pagination.total empty='No posts' singular='% post' plural='% posts']]</span> -->  
         </div>
     </section>
 <!-- /author -->
 
-<!-- The main content area on the homepage -->
-<main id="content" class="content" role="main">
+<section class="author-profile inner">
+    <h2 class="author-bio"> Born in Hamilton, Ontario, Canada on November 10, 1993, Thomas is a graduate of the Engineering Science program at the University of Toronto and a future MBA candidate through the 2+2 program at Harvard Business School. He is a creative designer, a proficient engineer and an ambitious entrepreneur.</h2>
+    <!--<h2 class="author-bio">As an enginner at Toyota and Tesla, Thomas was trained in lean operations and innovation. He was the youngest member of the S/X Line and Model X project teams at Tesla, responsible for enabling a production capacity of approximately 200,000 Model S and Model X vehicles per year.</h2>
+    <h2 class="author-bio">But these accomplishments don't tell the whole story. It's Thomas' inherent ability to lead that has him poised for greater heights. He has an undeniable capability to understand and inspire others - qualities that got him voted valedictorian of his highschool class.</h2>-->
+    <h2 class="author-bio">With his entire career ahead of him, Thomas is driving toward a legacy that both he and the world can be proud of. We'll just have to wait and see what form that takes...</h2>
+</section>
 
-    <!-- The tag below includes the post loop - partials/loop.hbs  -->
-    {% include loop.html %}
-
-</main>

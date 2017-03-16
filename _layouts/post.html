@@ -32,11 +32,18 @@ class: 'post-template'
                 <!-- [[tags prefix=" on "]] -->
                 {% if page.tags.size > 0 %} 
                 on 
-                {% for tag in page.tags %}
+                <!--{% for tag in page.tags %}
                     {% if forloop.index == page.tags.size %}
                        <a href='{{ site.baseurl }}tag/{{ tag }}'>{{ tag | capitalize }}</a>
                     {% else %}
                        <a href='{{ site.baseurl }}tag/{{ tag }}'>{{ tag | capitalize }}</a>,
+                    {% endif %}   
+                {% endfor %}-->
+                {% for tag in page.tags %}
+                    {% if forloop.index == page.tags.size %}
+                       {{ tag | capitalize }}
+                    {% else %}
+                       {{ tag | capitalize }},
                     {% endif %}   
                 {% endfor %}
                 {% endif %}
@@ -56,27 +63,28 @@ class: 'post-template'
 
             {% if site.image %}
             <figure class="author-image">
-                <a class="img" href="{{ site.baseurl }}author/{{ site.nickname }}" style="background-image: url({{ site.baseurl }}{{ site.image }})"><span class="hidden">{{ page.author }}'s Picture</span></a>
+                <!--<a class="img" href="{{ site.baseurl }}author/{{ site.nickname }}" style="background-image: url({{ site.baseurl }}{{ site.image }})"><span class="hidden">{{ page.author }}'s Picture</span></a>-->
+                <figure class="img" style="background-image: url({{ site.baseurl }}{{ site.image }})"><span class="hidden">{{ page.author }}'s Picture</span></figure>
             </figure>
             {% endif %}
 
             <section class="author">
-                <h4><a href="{{ site.baseurl }}author/{{ site.nickname }}">{{ site.author }}</a></h4>
-                
-                {% if site.bio %}
+                <!--<h4><a href="{{ site.baseurl }}author/{{ site.nickname }}">{{ site.author }}</a></h4>-->
+                <h4>{{ site.author }}</h4>
+                <!--{% if site.bio %}
                     <p> {{ site.bio }}</p>
                 {% else %}
                     <p>Read <a href="{{ site.baseurl }}author/{{ site.nickname }}">more posts</a> by this author.</p>
-                {% endif %}
+                {% endif %}-->
                 <div class="author-meta">
-                    {% if site.location %}<span class="author-location icon-location"> {{ site.location }}</span>{% endif %} 
-                    {% if site.url %}<span class="author-link icon-link"><a href="{{ site.url }}"> {{ site.short_url }}</a></span>{% endif %} 
+                    <!--{% if site.location %}<span class="author-location icon-location"> {{ site.location }}</span>{% endif %}-->
+                    {% if site.linkedin %}<span class="author-link icon-link"><a href="{{ site.linkedin }}"> {{ site.short_linkedin }}</a></span>{% endif %} 
                 </div>
             </section>
 
             <!-- /author  -->
 
-            <section class="share">
+            <!--<section class="share">
                 <h4>Share this post</h4>
                 <a class="icon-twitter" href="http://twitter.com/share?text={{ page.title }}&amp;url={{ site.url }}{{ page.url | remove: '/' }}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -90,7 +98,7 @@ class: 'post-template'
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+            </section>-->
             
             <!-- Add Disqus Comments -->
             {% if page.disqus %}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- [[! Page Meta ]] -->
-    <title>Thomas Alexandre</title>
+    <title>Author</title>
     <meta name="description" content="Thomas Alexandre - Emerging engineering and business leader" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -60,7 +60,7 @@
 
 
 </head>
-<body class="home-template nav-closed">
+<body class="author-template nav-closed">
 
     <div class="nav">
     <h3 class="nav-title">Menu</h3>
@@ -68,8 +68,8 @@
         <span class="hidden">Close</span>
     </a>
     <ul>
-        <li class="nav-home  nav-current" role="presentation"><a href="/">Home</a></li>
-        <li class="nav-author " role="presentation"><a href="/author/thomas">Author</a></li>
+        <li class="nav-home " role="presentation"><a href="/">Home</a></li>
+        <li class="nav-author  nav-current" role="presentation"><a href="/author/thomas">Author</a></li>
     </ul>
 </div>
 <span class="nav-cover"></span>
@@ -78,95 +78,44 @@
     <div class="site-wrapper">
 
         <!-- [[! Everything else gets inserted here ]] -->
-        <!-- < default -->
+        <!-- < default}} -->
 <!-- The tag above means - insert everything in this file into the [body] of the default.hbs template -->
 
-<!-- The big featured header  -->
-<header class="main-header "
-        style="background-image: url(/assets/images/cover.jpg) ">
-    <nav class="main-nav overlay clearfix">
-        <a class="blog-logo" href="/"><img src="/assets/images/logo.png" alt="Blog Logo" /></a>
+<!-- The big featured header -->
+
+<!-- Everything inside the #author tags pulls data from the author -->
+<!-- #author  -->
+    <header class="main-header author-head " style="background-image: url(/assets/images/the6ix.jpg) ">
+        <nav class="main-nav overlay clearfix">
+            <a class="blog-logo" href="/"><img src="/assets/images/logo.png" alt="Blog Logo" /></a>
+            
+                <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+            
+        </nav>
+    </header>
+
+    <section class="author-profile inner">
         
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        <figure class="author-image">
+            <div class="img" style="background-image: url(/assets/images/about.jpg)"><span class="hidden">Thomas Alexandre's Picture</span></div>
+        </figure>
         
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Thomas Alexandre</h1>
-            <h2 class="page-description">Emerging engineering and business leader</h2>
+        <h1 class="author-title">Thomas Alexandre</h1>
+        
+        <div class="author-meta">
+            <span class="author-link icon-link"><a href="https://www.linkedin.com/in/thomasgalexandre/">linkedin.com/in/thomasgalexandre/</a></span>
+            <!-- <span class="author-stats"><i class="icon-stats"></i> [[plural ../pagination.total empty='No posts' singular='% post' plural='% posts']]</span> -->  
         </div>
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
+    </section>
+<!-- /author -->
 
-<!-- The main content area on the homepage -->
-<main id="content" class="content" role="main">
+<section class="author-profile inner">
+    <h2 class="author-bio"> Born in Hamilton, Ontario, Canada on November 10, 1993, Thomas is a graduate of the Engineering Science program at the University of Toronto and a future MBA candidate through the 2+2 program at Harvard Business School. He is a creative designer, a proficient engineer and an ambitious entrepreneur.</h2>
+    <!--<h2 class="author-bio">As an enginner at Toyota and Tesla, Thomas was trained in lean operations and innovation. He was the youngest member of the S/X Line and Model X project teams at Tesla, responsible for enabling a production capacity of approximately 200,000 Model S and Model X vehicles per year.</h2>
+    <h2 class="author-bio">But these accomplishments don't tell the whole story. It's Thomas' inherent ability to lead that has him poised for greater heights. He has an undeniable capability to understand and inspire others - qualities that got him voted valedictorian of his highschool class.</h2>-->
+    <h2 class="author-bio">With his entire career ahead of him, Thomas is driving toward a legacy that both he and the world can be proud of. We'll just have to wait and see what form that takes...</h2>
+</section>
 
-    <!-- The tag below includes the post loop - partials/loop.hbs -->
-        <!-- Previous/next page links - only displayed on page 2+ -->
-    <div class="extra-pagination inner">
-        
-            <nav class="pagination" role="pagination">
-    
-    <span class="page-number"> Page 1 of 1 </span>
-     
-</nav>
-        
-    </div>
-
-    <!-- This is the post loop - each post will be output using this markup -->
-    
-    <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="/WhyIBoughtAnElectricVehicle">Why I bought an electric vehicle</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>I bought my first car! It’s a 2017 Chevrolet Volt LT and I am very happy with it. I will admit that the Volt was not... <a class="read-more" href="/WhyIBoughtAnElectricVehicle">&raquo;</a></p>
-        </section>
-        <!--<footer class="post-meta">
-            <!-- author
-            <a href='/author/'>Thomas Alexandre</a>
-            <!-- [[tags prefix=" on "]]
-             
-                on 
-                
-                    
-                       <a href='/tag/technology'>Technology</a>
-                       
-                
-            
-            <time class="post-date" datetime="2017-03-15">15 Mar 2017</time>
-        </footer>-->
-        <footer class="post-meta">
-            <!-- author -->
-            <!--<a href='/author/'>Thomas Alexandre</a>-->
-            <p>Thomas Alexandre
-            <!-- [[tags prefix=" on "]] -->
-             
-                on 
-                
-                    
-                       Technology
-                       
-                
-            
-            <time class="post-date" datetime="2017-03-15">15 Mar 2017</time>
-            </p>
-        </footer>
-    </article>
-    
-
-    <!-- Previous/next page links - displayed on every page -->
-    
-        <nav class="pagination" role="pagination">
-    
-    <span class="page-number"> Page 1 of 1 </span>
-     
-</nav>
-    
-
-
-</main>
 
 
         <footer class="site-footer clearfix">
